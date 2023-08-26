@@ -1,0 +1,148 @@
+@font-face {
+    font-family: '000webfont';
+    src: url(000webfont.ttf);
+}
+
+@font-face {
+    font-family: 'cherish';
+    src: url(Cherish.ttf);
+}
+
+@font-face {
+    font-family: 'heartFont';
+    src: url(heartfont.ttf);
+}
+
+@font-face {
+    font-family: 'proggyClean';
+    src: url(ProggyClean.ttf);
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+
+.header {
+    text-align: center;
+    margin-top: 2px;
+    font-family: cherish;
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(251, 204, 204);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: solid 1px rgb(241, 241, 241);
+}
+
+.contentRowOne {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contentRowTwo {
+    display: flex;
+    align-items: ceter;
+    justify-content: center;
+}
+
+.welcomeText {
+    text-align: center;
+    font-family: heartFont;
+    animation-name: floating;
+    color: rgb(155, 132, 102);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.notePad {
+    font-family: heartFont;
+    color: grey;
+}
+
+.notePad textarea {
+    font-family: proggyClean;
+    color: rgb(155, 132, 102);
+    font-size: 16px;
+    border: solid 2px rgb(170, 227, 255);
+    border-radius: 20px;
+    padding: 20px 20px;
+    resize: vertical;
+    outline: none;
+}
+
+.toDoList {
+    align-self: baseline;
+}
+
+.toDoHead span {
+    font-family: heartFont;
+    color: rgb(155, 132, 102);
+}
+
+.toDoHead input {
+    font-family: proggyClean;
+    color: rgb(155, 132, 102);
+    border-radius: 10px;
+    border-color: rgb(255, 217, 217);
+    border-style: solid;
+    padding: 5px;
+    outline: none;
+}
+
+.toDoList li {
+    font-family: proggyClean;
+    color: rgb(155, 132, 102);
+    cursor: pointer;
+    padding: 2px;
+    list-style-type: none;
+    position: relative;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.toDoList ul {
+    text-align: left;
+}
+
+.toDoList li.checked {
+    text-decoration: line-through;
+    color: rgb(209, 209, 209);
+}
+
+.weekView {
+    font-family: heartFOnt;
+    color: rgb(155, 132, 102);
+}
+
+.daysRowOne {
+    display: flex;
+    gap: 10px;
+}
+
+.daysRowTwo {
+    display: flex;
+    gap: 10px;
+}
+
+.weekview {
+    font-family: heartFont;
+}
+
+.weekView textarea {
+    font-family: proggyClean;
+    color: grey;
+    font-size: 14px;
+    border: solid 2px rgb(255, 216, 161);
+    border-radius: 20px;
+    padding: 8px 8px;
+    resize: vertical;
+    outline: none;
+}

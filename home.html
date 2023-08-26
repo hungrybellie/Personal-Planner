@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="header">
+        <span>Bellie's Home</span>
+    </div>
+
+    <br>
+
+    <div class="welcomeText">
+        <p>
+            welcome to my planner ! &lt;3
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="contentRowOne">
+        
+        <br>
+    
+        <div class="notePad">
+            <span>notes !</span>
+            <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+     
+        <div class="toDoList" id="toDoDiv">
+
+            <div class="toDoHead">
+                <span>to do !</span>
+                <br>
+                <input type="text" id="toDoInput">
+                <span onclick="newToDo()" class="addButton">+</span>
+            </div>
+
+           <ul id="listToDo">
+           </ul>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    
+    <div class="contentRowTwo">
+
+
+        <div class="weekView">
+
+            <span>my week !</span>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="daysRowOne">
+                <div id="sunday">
+                    <span>sun</span>
+                    <br>
+                    <textarea name="" id="" cols="10" rows="10"></textarea>
+                </div>
+        
+                <div id="monday">
+                    <span>mon</span>
+                    <br>
+                    <textarea name="" id="" cols=10" rows="10"></textarea>
+                </div>
+    
+                <div id="tuesday">
+                    <span>tue</span>
+                    <br>
+                    <textarea name="" id="" cols="10" rows="10"></textarea>
+                </div>
+    
+                <div id="wednesday">
+                    <span>wed</span>
+                    <br>
+                    <textarea name="" id="" cols="10" rows="10"></textarea>
+                </div>
+            
+            </div>
+
+            <br>
+           
+            <div class="daysRowTwo">
+                <div id="thursday">
+                    <span>thu</span>
+                    <br>
+                    <textarea name="" id="" cols="10" rows="10"></textarea>
+                </div>
+    
+                <div id="friday">
+                    <span>fri</span>
+                    <br>
+                    <textarea name="" id="" cols="10" rows="10"></textarea>
+                </div>
+    
+                <div id="saturday">
+                    <span>sat</span>
+                    <br>
+                    <textarea name="" id="" cols="10" rows="10"></textarea>
+                </div>
+    
+                <div class="clock">
+
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+
+    <script>
+
+        function makeNode() {
+            var span = document.createElement("SPAN");
+            var closeButton = document.createTextNode("   x");
+            span.className = "close";
+            span.appendChild(closeButton);
+        }
+
+        function closeNode() {
+            close[i].onclick = function() {
+            var itemToClose = this.parentElement;
+            itemToClose.style.display = "none";
+        }
+
+        var toDoListNodes = document.getElementsByTagName("LI");
+        for (var i = 0; i < toDoListNodes.length; i++) {
+            makeNode();
+            toDoListNodes[i].appendChild(span);
+        }
+
+        var close = document.getElementsByClassName("close");
+        for (var i = 0; i < close.length; i++) {
+                closeNode();
+            }
+        }     
+        
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+            if (ev.target.tagName === "LI") {
+                ev.target.classList.toggle('checked');
+            }
+        }, false);
+
+        function newToDo() {
+            var li = document.createElement("li");
+            var inputVal = document.getElementById("toDoInput").value;
+            var textNode = document.createTextNode(inputVal);
+            li.appendChild(textNode);
+
+            if (inputVal != '') {
+                document.getElementById("listToDo").appendChild(li);
+            } 
+
+            document.getElementById("toDoInput").value = ""; 
+
+            makeNode();
+            li[i].appendChild(span);
+            
+            for (var i = 0; i < close.length; i++) {
+                closeNode();
+            }
+        }
+    
+
+    </script>
+  
+   
+   
+</body>
+</html>
